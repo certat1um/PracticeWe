@@ -1,0 +1,20 @@
+.slider {
+    &-container {
+        overflow: hidden;
+        width: 660px;
+        height: 350px;
+        background: rgb(27, 36, 49);
+        border-radius: 5px;
+    }
+    &-track {
+        display: flex;
+        transition: .3s;
+    }
+    &-item {
+        flex: 0 0 660px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
