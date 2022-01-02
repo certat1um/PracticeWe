@@ -1,4 +1,4 @@
-@media (max-width: 1285px) {
+@media only screen and (max-width: 1285px) {
     .hero {
         &-inner {
             flex-direction: column;
@@ -10,6 +10,18 @@
         }
         &-btn {
             display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 835px) {
+    .naming {
+        &-choices {
+            flex-wrap: wrap;
+            margin: -10px 0;
+        }
+        &-choice {
+            margin: 10px 0;
         }
     }
 }

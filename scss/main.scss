@@ -20,12 +20,14 @@ for borders
 html {
     font-size: 15px;
     position: relative;
+    overflow-x: hidden;
 }
 body {
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
     // font-size: 15px;
     color: $base-black;
+    
 }
 .container {
     max-width: 1260px;
@@ -180,29 +182,49 @@ h3 {
     &-heading {
         margin-bottom: 40px;
     }
+    &-popup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 20px;
+        right: -1115px;
+        &.active {
+            right: 15px;
+        }
+        p {
+            font-size: 1.6rem;
+            color: $base-black;
+        }
+        h3 {
+            color: $smooth-blue;
+        }
+    }
     &-choices {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 800px;
+        align-items: space-between;
+        justify-content: center;
+        max-width: 1000px;
+        margin: 0 -20px;
     }
     &-choice {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex: 0 1 220px;
+        flex: 0 0 220px;
         height: 135px;
         border: 1px solid $smooth-black;
         border-radius: 8px;
         padding: 10px 12px;
+        margin: 0 20px;
         cursor: pointer;
         font-size: 22px;
         transition: .3s;
         &:hover, &.active {
             background: $smooth-white;
             color: #fff;
-            flex: 0 1 260px;
+            flex: 0 0 260px;
         }
     }
     &-field {
@@ -248,7 +270,6 @@ h3 {
         .help-icon {
             position: relative;
             cursor: help;
-            
             &:hover::after{
                 content: attr(data-title);
                 position: absolute;

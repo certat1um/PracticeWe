@@ -63,17 +63,21 @@
             <div class="container">
                 <div class="naming-inner">
                     <h2 class="naming-heading">Choose a style how to call you!</h2>
+                    <div class="naming-popup popup">
+                        <p></p>
+                        <h3></h3>
+                    </div>
                     <div class="naming-choices">
                         <div class="naming-choice">
-                            Hello!
+                            <p class="naming-style">Hello!</p>
                             <p class="naming-name"></p>
                         </div>
                         <div class="naming-choice">
-                            Good day!
+                            <p class="naming-style">Good day!</p>
                             <p class="naming-name"></p>
                         </div>
                         <div class="naming-choice">
-                            Hi, how are you?
+                            <p class="naming-style">Hi, how are you?</p>
                             <p class="naming-name"></p>
                         </div>
                     </div>
@@ -90,15 +94,11 @@
                     <h2 class="form-heading">Check form</h2>
                     <span class="form-subheading">
                         Here you can enter your data and we will check is it correct.
-                        <a href="#" data-title="it checks your full name and password length (need to be not less than 6)" class="help-icon">
+                        <a href="#" data-title="First and Last name should start with the capital first letter" class="help-icon">
                             <img src="img/form/help-icon.svg" alt="help-icon">
                         </a>
                     </span>
                     <form class="form-content">
-                        <div class="form-popup popup">
-                            <img src="img/form/correct.png" alt="correct">
-                            <h3>Correct!</h3>
-                        </div>
                         <label for="">*First name: 
                             <input type="text" required>
                         </label>
@@ -111,7 +111,7 @@
                         <label for="">E-mail: 
                             <input type="email">
                         </label>
-                        <label for="">Phone: 
+                        <label for="">Phone:
                             <input type="tel">
                         </label>
                         <input type="submit" value="Check" class="form-btn">
@@ -121,13 +121,10 @@
         </section>
     </main>
 
-    <footer class="footer">
-
-    </footer>
+    <footer class="footer"></footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slider.js" type="module"></script>
-    <script src="js/choices.js" type="module"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
