@@ -252,6 +252,19 @@ h3 {
 }
 
 // form = = = = = = = = =
+@mixin forInputsForm {
+    height: 30px;
+    width: 220px;
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    font-family: 'Rubik';
+    font-size: 1rem;
+    color: $base-black;
+    font-weight: 300;
+    padding: 0 5px;
+    outline: none;
+}
+
 .form {
     background: #f5f5f5;
     padding: 60px 0;
@@ -293,35 +306,51 @@ h3 {
     }
     &-content {
         display: flex;
-        width: 700px;
+        max-width: 700px;
         flex-wrap: wrap;
         font-size: 1.1rem;
         margin: -8px -10px;
         justify-content: space-between;
-        label {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 325px;
-            margin: 8px 10px;
-        }
-        input {
-            height: 30px;
-            width: 220px;
-            border: 1px solid #cecece;
-            border-radius: 2px;
-            font-family: 'Rubik';
-            font-size: 1rem;
-            color: $base-black;
-            font-weight: 300;
-            padding: 0 5px;
-            outline: none;
-        }
         input[type="submit"] {
+            @include forInputsForm;
             margin: 8px 10px;
             cursor: pointer;
             &:hover {
                 background: #e0e0e0;
+            }
+        }
+    }
+    &-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 325px;
+        margin: 8px 10px;
+        position: relative;
+        svg {
+            position: absolute;
+            visibility: hidden;
+            right: 6px;
+        }
+        input {
+            @include forInputsForm;
+        }
+        &.failure {
+            input {
+                border: 1px solid red;
+            }
+            svg.fa-times-circle {
+                visibility: visible;
+                color: red;
+            }
+        }
+        &.success {
+            input {
+                border: 1px solid green;
+            }
+            svg.fa-check-circle {
+                visibility: visible;
+                color: green;
             }
         }
     }

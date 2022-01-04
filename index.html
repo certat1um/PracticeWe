@@ -99,21 +99,40 @@
                         </a>
                     </span>
                     <form class="form-content">
-                        <label for="">*First name: 
-                            <input type="text" required>
-                        </label>
-                        <label for="">*Last name: 
-                            <input type="text" required>
-                        </label>
-                        <label for="">*Password: 
-                            <input type="password" required>
-                        </label>
-                        <label for="">E-mail: 
-                            <input type="email">
-                        </label>
-                        <label for="">Phone:
-                            <input type="tel">
-                        </label>
+                        <div class="form-item">
+                            <label for="">*First name:</label>
+                            <input type="text" required id="first-name">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                        <div class="form-item">
+                            <label for="">*Last name:</label>
+                            <input type="text" required id="last-name">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                        
+                        <div class="form-item">
+                            <label for="">*Password:</label>
+                            <input type="password" required placeholder="min 6 length"
+                            id="password">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                        <div class="form-item">
+                            <label for="">E-mail:</label>
+                            <input type="email" placeholder="example@example.com"
+                            id="email">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="far fa-times-circle"></i>
+                        </div>
+                        <div class="form-item">
+                            <label for="">Phone:</label>
+                            <input type="tel" placeholder="0961233223"
+                            id="phone">
+                            <i class="fas fa-check-circle"></i>
+                            <i class="far fa-times-circle"></i>
+                        </div>
                         <input type="submit" value="Check" class="form-btn">
                     </form>
                 </div>
@@ -123,6 +142,7 @@
 
     <footer class="footer"></footer>
 
+    <script src="js/all.min.js"></script> <!-- Font Awesome -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slider.js" type="module"></script>
     <script src="js/app.js"></script>

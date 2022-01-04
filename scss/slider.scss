@@ -5,14 +5,15 @@
         height: 350px;
         background: rgb(27, 36, 49);
         border-radius: 5px;
+        
     }
     &-track {
         display: flex;
         transition: .3s;
+        height: 100%;
     }
     &-item {
-        flex: 0 0 660px;
-        height: 350px;
+        flex: 0 0 100%;
         display: flex;
         align-items: center;
         justify-content: center;
