@@ -1,11 +1,10 @@
 .slider {
     &-container {
         overflow: hidden;
-        width: 660px;
+        max-width: 660px;
         height: 350px;
         background: rgb(27, 36, 49);
         border-radius: 5px;
-        
     }
     &-track {
         display: flex;
@@ -14,6 +13,7 @@
     }
     &-item {
         flex: 0 0 100%;
+        width: 660px;
         display: flex;
         align-items: center;
         justify-content: center;

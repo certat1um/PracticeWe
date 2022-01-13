@@ -17,9 +17,25 @@
                 <div class="header-logo">
                     <img src="img/header/logo.svg" alt="logo">
                 </div>
+                <div class="header-burger">
+                    <span></span>
+                </div>
                 <nav class="header-nav">
                     <ul>
-                        <li><a href="#">Chapter 1</a></li>
+                        <li class="hidden">
+                            <a href="#">Chapter 1 <i class="fas fa-chevron-down"></i></a>
+                            <ul class="sub-links">
+                                <li><a href="#">subChapter 1</a></li>
+                                <li class="hidden">
+                                    <a href="#">subChapter 2 <i class="fas fa-chevron-right"></i></a>
+                                    <ul class="sub-sub-links">
+                                        <li><a href="#">subsubChapter 1</a></li>
+                                        <li><a href="#">subsubChapter 2</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">subChapter 3</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#">Chapter 2</a></li>
                         <li><a href="#">Chapter 3</a></li>
                         <li><a href="#">Chapter 4</a></li>
@@ -94,7 +110,7 @@
                     <h2 class="form-heading">Check form</h2>
                     <span class="form-subheading">
                         Here you can enter your data and we will check is it correct.
-                        <a href="#" data-title="First and Last name should start with the capital first letter" class="help-icon">
+                        <a data-title="First and Last name should start with the capital first letter" class="help-icon">
                             <img src="img/form/help-icon.svg" alt="help-icon">
                         </a>
                     </span>

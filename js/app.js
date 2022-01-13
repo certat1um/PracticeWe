@@ -83,7 +83,7 @@ const choices = document.querySelectorAll('.naming-choice');
 const welcomePopup = document.querySelector('.naming-popup');
 let count; // for welcome popup
 
-// == Name Setter in Local Storage ===>
+// -- Name Setter in Local Storage --->
 function fillNames() {
     name.forEach((item) => {
         item.innerHTML = localStorage.getItem('nameOfTheUser');
@@ -94,13 +94,13 @@ if(localStorage.getItem('nameOfTheUser') !== null) {
     fillNames();
 }
 
-// To set name (dynamic view)
+// to set name (dynamic view)
 input.addEventListener('input', () => {
     localStorage.setItem('nameOfTheUser', input.value);
     fillNames();
 });
 
-// == Choices Picker ====>
+// -- Choices Picker ---->
 choices.forEach((item) => {
     item.addEventListener('click', () => {
         // clear count
@@ -120,14 +120,14 @@ choices.forEach((item) => {
     })
 });
 
-// == Choice Detecter ====>
+// -- Choice Detecter ---->
 choices.forEach((item, i) => {
     if(i == localStorage.getItem('choiceID')) {
         item.classList.add('active');
     }
 });
 
-// == welcome popup ===>
+// == Welcome Popup ===>
 count = localStorage.getItem('countOfGreetengs');
 count++;
 localStorage.setItem('countOfGreetengs', count);
@@ -145,3 +145,42 @@ function toGreet(popup) {
     popup.classList.add('active');
     setTimeout(() => {popup.classList.remove('active')}, 3000);
 }
+
+// == Burger ===>
+const burger = document.querySelector('.header-burger');
+const nav = document.querySelector('.header-nav');
+const liElements = document.querySelectorAll('.header-nav ul li');
+
+// liElements.forEach((item) => {
+//     item.childNodes.forEach((child) => {
+//         if(child.localName == "ul") {
+//             item.firstChild.innerHTML = 'Wee!'; // does it into #text elem
+//         }
+//     });
+// });
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    if(nav.classList.contains('active') == true) {
+        document.querySelector('html').classList.add('freeze');
+    } else {
+        document.querySelector('html').classList.remove('freeze');
+    }
+});
+
+
+// == Opacity Animation ===>
+const form = document.querySelector('.form-inner');
+
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            setTimeout(() => {change.target.classList.add('show');}, 150);
+            
+        }
+    });
+}
+
+let options = { threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+observer.observe(form);
